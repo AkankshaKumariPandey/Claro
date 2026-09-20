@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Knowledge Library — CLARO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/library.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="dark-theme">
+  <div class="library-layout">
+    <aside class="library-sidebar glass-panel">
+      <div class="brand-small">
+        <h3>CLARO</h3>
+      </div>
+      <nav class="library-nav">
+        <a href="dashboard.html" class="lib-nav-item">Dashboard</a>
+        <a href="dashboard.html?view=ask" class="lib-nav-item">Ask CLARO</a>
+        <a href="library.html" class="lib-nav-item active">Knowledge Library</a>
+        <a href="books.html" class="lib-nav-item">Books</a>
+        <a href="dashboard.html?view=recent" class="lib-nav-item">Recent Questions</a>
+        <a href="dashboard.html?view=saved" class="lib-nav-item">Saved Answers</a>
+        <a href="dashboard.html?view=settings" class="lib-nav-item">Settings</a>
+        <a href="#" id="libLogout" class="lib-nav-item">Logout</a>
+      </nav>
+      <div class="offline-status glass-card-inner">
+        <span class="status-dot" id="netDot"></span>
+        <span id="netText">Checking connection…</span>
+      </div>
+    </aside>
+    <aside class="... sidebar ..." role="navigation" aria-label="Main navigation">
+  ...
+  <div class="offline-status ...">
+    <span class="status-dot" id="netDot"></span>
+    <span id="netText">Checking connection…</span>
+  </div>
+</aside>
+
+    <main class="lib-main">
+      <header class="lib-header glass-card">
+        <h2>Knowledge Library</h2>
+        <p class="lib-sub">Browse subjects, then explore books, chapters, topics, and questions.</p>
+      </header>
+
+      <section id="view-subjects" class="glass-card">
+        <div class="breadcrumb" id="subjectBreadcrumb">
+          <span>Library</span>
+        </div>
+        <h3 style="margin:10px 0 6px;">Subjects</h3>
+        <div class="subjects-grid" id="subjectsGrid"></div>
+      </section>
+
+      <section id="view-books" class="glass-card" style="display:none;">
+        <div class="breadcrumb" id="booksBreadcrumb">
+          <a href="library.html">Library</a>
+          <span class="sep">/</span>
+          <span id="booksSubjectName">Subject</span>
+        </div>
+        <h3 style="margin:10px 0 6px;">Books</h3>
+        <div class="books-grid" id="booksGrid"></div>
+      </section>
+
+      <section id="view-chapters" class="glass-card" style="display:none;">
+        <div class="breadcrumb" id="chaptersBreadcrumb">
+          <a href="library.html">Library</a>
+          <span class="sep">/</span>
+          <a href="#" id="crumbSubject">Subject</a>
+          <span class="sep">/</span>
+          <a href="#" id="crumbBook">Book</a>
+        </div>
+        <h3 style="margin:10px 0 6px;">Chapters</h3>
+        <div class="chapters-list" id="chaptersList"></div>
+      </section>
+
+      <section id="view-topics" class="glass-card" style="display:none;">
+        <div class="breadcrumb" id="topicsBreadcrumb">
+          <a href="library.html">Library</a>
+          <span class="sep">/</span>
+          <a href="#" id="tCrumbSubject">Subject</a>
+          <span class="sep">/</span>
+          <a href="#" id="tCrumbBook">Book</a>
+          <span class="sep">/</span>
+          <a href="#" id="tCrumbChapter">Chapter</a>
+        </div>
+        <h3 style="margin:10px 0 6px;">Topics & Questions</h3>
+        <div class="topics-list" id="topicsList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up — CLARO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="dark-theme">
+  <header class="glass-header compact">
+    <div class="brand">
+      <h1>CLARO</h1>
+    </div>
+    <a href="index.html" class="btn btn-ghost">Back</a>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card glass-card">
+      <h2>Create Your CLARO Account</h2>
+
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required />
+          <small class="error-msg" id="errName"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="userName">Username</label>
+          <input type="text" id="userName" required minlength="3" />
+          <small class="error-msg" id="errUser"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+          <small class="error-msg" id="errEmail"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" required minlength="6" />
+          <small class="error-msg" id="errPass"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="pass2">Confirm Password</label>
+          <input type="password" id="pass2" required />
+          <small class="error-msg" id="errPass2"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary full">Create Account</button>
+
+        <p class="auth-footer">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

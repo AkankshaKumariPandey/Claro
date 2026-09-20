@@ -1,0 +1,37 @@
+[
+  {
+    "id": "dbms-book-001",
+    "subjectId": "dbms",
+    "title": "Database Management Systems",
+    "level": "Diploma",
+    "description": "Core DBMS concepts for diploma students."
+  },
+  {
+    "id": "os-book-001",
+    "subjectId": "os",
+    "title": "Operating Systems Fundamentals",
+    "level": "Diploma",
+    "description": "Introduction to operating systems for diploma/college."
+  },
+  {
+    "id": "cn-book-001",
+    "subjectId": "cn",
+    "title": "Computer Networks Basics",
+    "level": "Diploma",
+    "description": "Networking fundamentals for diploma students."
+  },
+  {
+    "id": "phy-mech-001",
+    "subjectId": "phy",
+    "title": "Mechanics",
+    "level": "High School",
+    "description": "Laws of motion, forces, and basic mechanics."
+  },
+  {
+    "id": "phy-elec-001",
+    "subjectId": "phy",
+    "title": "Electricity",
+    "level": "High School",
+    "description": "Current electricity, Ohm’s law, and circuits."
+  }
+]

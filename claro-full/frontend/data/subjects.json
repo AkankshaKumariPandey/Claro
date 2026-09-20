@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cs",
+    "name": "Computer Science",
+    "levels": ["Diploma", "College"],
+    "description": "Programming, databases, operating systems, networks, and more."
+  },
+  {
+    "id": "dbms",
+    "name": "DBMS",
+    "levels": ["Diploma", "College"],
+    "description": "Database concepts, normalization, SQL, and design."
+  },
+  {
+    "id": "os",
+    "name": "Operating Systems",
+    "levels": ["Diploma", "College"],
+    "description": "Processes, memory, files, scheduling, and OS fundamentals."
+  },
+  {
+    "id": "cn",
+    "name": "Computer Networks",
+    "levels": ["Diploma", "College"],
+    "description": "Networking models, protocols, IP, routing, and basics of the Internet."
+  },
+  {
+    "id": "phy",
+    "name": "Physics",
+    "levels": ["High School", "Diploma"],
+    "description": "Mechanics, electricity, magnetism, waves, and modern physics."
+  },
+  {
+    "id": "math",
+    "name": "Mathematics",
+    "levels": ["High School", "Diploma", "College"],
+    "description": "Algebra, calculus, probability, and engineering mathematics."
+  }
+]

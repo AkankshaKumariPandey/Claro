@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dbms-norm",
+    "bookId": "dbms-book-001",
+    "title": "Normalization",
+    "description": "Why and how we normalize relational databases."
+  },
+  {
+    "id": "dbms-sql-basics",
+    "bookId": "dbms-book-001",
+    "title": "SQL Basics",
+    "description": "Introduction to SQL queries and operations."
+  },
+  {
+    "id": "os-intro",
+    "bookId": "os-book-001",
+    "title": "Introduction to OS",
+    "description": "What an operating system is and why it matters."
+  },
+  {
+    "id": "os-process",
+    "bookId": "os-book-001",
+    "title": "Processes and Scheduling",
+    "description": "Process life cycle and CPU scheduling basics."
+  },
+  {
+    "id": "cn-intro",
+    "bookId": "cn-book-001",
+    "title": "Introduction to Networks",
+    "description": "Basic network types, models, and devices."
+  },
+  {
+    "id": "phy-lom",
+    "bookId": "phy-mech-001",
+    "title": "Laws of Motion",
+    "description": "Newton’s laws and their applications."
+  },
+  {
+    "id": "phy-ohm",
+    "bookId": "phy-elec-001",
+    "title": "Ohm’s Law and Circuits",
+    "description": "Voltage, current, resistance, and simple circuits."
+  }
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login — CLARO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="dark-theme">
+  <header class="glass-header compact">
+    <div class="brand">
+      <h1>CLARO</h1>
+    </div>
+    <a href="index.html" class="btn btn-ghost">Back</a>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-card glass-card">
+      <h2>Welcome Back</h2>
+      <p class="auth-sub">Continue your learning journey with CLARO.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginUser">Email / Username</label>
+          <input type="text" id="loginUser" required />
+          <small class="error-msg" id="errUser"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPass">Password</label>
+          <input type="password" id="loginPass" required />
+          <small class="error-msg" id="errPass"></small>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe" />
+            Remember me
+          </label>
+          <a href="#" class="link-muted">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary full">Login</button>
+        <a href="dashboard.html?guest=true" class="btn btn-ghost full">Continue as Guest</a>
+
+        <p class="auth-footer">
+          Don't have an account? <a href="signup.html">Sign Up</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CLARO — Show Your Work. Understand Your Answer.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="dark-theme">
+  <header class="glass-header">
+    <div class="brand">
+      <h1>CLARO</h1>
+      <p class="tagline">Show Your Work. Understand Your Answer.</p>
+    </div>
+    <nav class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="landing-hero">
+    <section class="hero-content">
+      <h2 class="hero-title">CLARO</h2>
+      <p class="hero-subtitle">
+        An offline-first learning platform that helps students understand questions through structured answers, step-by-step reasoning, and local educational knowledge.
+      </p>
+      <div class="hero-actions">
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+        <a href="dashboard.html?guest=true" class="btn btn-ghost">Continue as Guest</a>
+      </div>
+      <div class="offline-badge">
+        <span class="status-dot online"></span>
+        Offline Ready
+      </div>
+    </section>
+
+    <section class="hero-preview">
+      <div class="preview-card glass-card">
+        <div class="preview-question">
+          <strong>Question:</strong> What is normalization in DBMS?
+        </div>
+        <div class="preview-answer glass-card-inner">
+          <div class="answer-section">
+            <h4>Answer</h4>
+            <p>Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity by dividing large tables into smaller, related ones.</p>
+          </div>
+          <div class="answer-section">
+            <h4>Key Points</h4>
+            <ul>
+              <li>Reduces duplicate data</li>
+              <li>Improves data integrity</li>
+              <li>Uses normal forms (1NF, 2NF, 3NF, BCNF)</li>
+            </ul>
+          </div>
+          <div class="answer-section">
+            <h4>Step-by-Step</h4>
+            <ol>
+              <li>Identify repeating groups</li>
+              <li>Create separate tables</li>
+              <li>Define primary/foreign keys</li>
+            </ol>
+          </div>
+          <div class="answer-meta">
+            <span class="meta-badge">Confidence: High</span>
+            <span class="meta-badge">Source: Definition</span>
+          </div>
+          <div class="answer-section">
+            <h4>Why Does This Matter?</h4>
+            <p>It makes databases easier to maintain, reduces anomalies during updates, and supports scalable application design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <p>CLARO — Offline Educational Reasoning Platform</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+ <script src="js/db.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/questions.js"></script>
+</body>
+</html>

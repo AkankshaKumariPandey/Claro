@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CLARO Self-Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-theme">
+  <div style="max-width:800px; margin:40px auto; padding:0 16px; color:var(--text);">
+    <h1>CLARO Self-Test</h1>
+    <p>Open the browser console to see results.</p>
+  </div>
+  <script src="js/db.js"></script>
+  <script src="js/storage.js"></script>
+  <script>
+    (async () => {
+      const log = [];
+      function pass(msg) { log.push(`✅ ${msg}`); }
+      function fail(msg) { log.push(`❌ ${msg}`); }
+
+      try {
+        // Test DB open
+        await DB.open();
+        pass('IndexedDB opened successfully');
+      } catch (e) {
+        fail('IndexedDB open failed: ' + e.message);
+      }
+
+      try {
+        // Test adding and reading history
+        const testItem = {
+          id: 'test-' + Date.now(),
+          question: 'Self-test question',
+          status: 'success',
+          timestamp: Date.now(),
+          subject: 'General'
+        };
+        await DB.addHistory(testItem);
+        const hist = await DB.getHistory();
+        if (hist.find(h => h.id === testItem.id)) {
+          pass('History add & read works');
+        } else {
+          fail('History item not found after insert');
+        }
+        await DB.deleteHistory(testItem.id);
+      } catch (e) {
+        fail('History test failed: ' + e.message);
+      }
+
+      try {
+        // Test saved answers
+        const testSaved = {
+          id: 'saved-test-' + Date.now(),
+          question: 'Saved test',
+          answer: { summary: 'Test summary' },
+          confidence: 'high',
+          sourceType: 'Definition',
+          savedAt: Date.now()
+        };
+        const ok = await DB.saveAnswer(testSaved);
+        if (!ok) fail('Saving answer reported failure');
+        const saved = await DB.getSaved();
+        if (saved.find(s => s.id === testSaved.id)) {
+          pass('Saved answers add & read works');
+        } else {
+          fail('Saved answer not found after insert');
+        }
+        await DB.removeSaved(testSaved.id);
+      } catch (e) {
+        fail('Saved answers test failed: ' + e.message);
+      }
+
+      console.log('CLARO Self-Test Results:');
+      log.forEach(line => console.log(line));
+    })();
+  </script>
+</body>
+</html>
