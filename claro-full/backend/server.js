@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
@@ -12,5 +12,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`CLARO backend running on http://localhost:${PORT}`);
+    console.log(`CLARO backend running on port ${PORT}`);
 });
